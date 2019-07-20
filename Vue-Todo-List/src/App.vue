@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <Header></Header>
+    <TextArea></TextArea>
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
+import TextArea from './components/TextArea'
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    TextArea
   }
 }
 </script>
@@ -18,7 +21,7 @@ export default {
 #app {
 
   height: auto;
-  width: 800px;
+  width: px;
   border:1px solid black;
   border-radius: 15px;
   margin-left: 30%;
