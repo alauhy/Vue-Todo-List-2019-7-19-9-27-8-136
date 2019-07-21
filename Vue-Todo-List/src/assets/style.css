@@ -65,3 +65,7 @@ input {
 .div-body-data-table-dl-del {
     color: lightgrey;
 }
+.footer-span{
+    display: block;
+    text-align: center;
+}

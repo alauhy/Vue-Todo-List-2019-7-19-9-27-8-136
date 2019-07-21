@@ -5,7 +5,8 @@ import 'iview/dist/styles/iview.css';
 import '../src/assets/style.css';
 
 Vue.config.productionTip = false
-Vue.use(iView)
+Vue.use(iView);
+Vue.prototype.bus = new Vue()
 
 new Vue({
   render: h => h(App),
