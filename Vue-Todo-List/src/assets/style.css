@@ -1,0 +1,67 @@
+input {
+    width: 500px;
+    height: 25px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.add-button {
+    border-radius: 5px;
+    background-color: palevioletred;
+    font-size: 20px;
+    color: white;
+    width: 80px;
+    height: 35px;
+}
+#title{
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Times New Roman";
+}
+#description{
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: "Times New Roman";
+}
+
+#footer{
+    text-align: center;
+}
+.footer-div-button{
+    margin: 10px;
+    border-width: 0;
+    font-size: 20px;
+    color: pink;
+}
+#active {
+    width: 680px;
+    height: auto;
+    margin: 10px;
+    text-align: left;
+}
+
+.check {
+    margin: 5px;
+    size: 30px;
+}
+
+.pink {
+    margin: 5px;
+    background: #ffe4e1;
+
+}
+
+.div-body-data-table-dl {
+    margin: 5px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.div-body-data-table-dl-checkbox {
+    margin: 5px;
+}
+
+.div-body-data-table-dl-del {
+    color: lightgrey;
+}

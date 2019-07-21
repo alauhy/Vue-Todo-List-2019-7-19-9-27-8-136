@@ -12,17 +12,7 @@
 </script>
 
 <style scoped>
-    #title{
-        margin-left: 10px;
-        font-size: 25px;
-        font-weight: bold;
-        font-family: "Times New Roman";
-    }
-    #description{
-        margin-left: 10px;
-        font-size: 20px;
-        font-family: "Times New Roman";
-    }
+    @import "../assets/style.css";
 
 
 
