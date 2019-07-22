@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <AddBox @sendTodo="addToList"></AddBox>
-    <Active :toDoList="toDoList"></Active>
+    <Active ></Active>
 
   </div>
 </template>
@@ -20,18 +20,29 @@ export default {
     AddBox
 
   },
-  data(){
-    return{
-      toDoList: [],
+
+  mounted(){
+    this.axios.get('http://5d3576325b83cd0014d0adb9.mockapi.io/api/v1/todolist').then(res=>
+    {
+      this.$store.commit('toSetList',res.data)
+    })
+  },
+  watch:{
+    watchTheList(){
+      this.$store.state.todolist
     }
+
   },
   methods:{
+
     addToList(toDoEvent) {
-      this.toDoList.push({
+
+      this.$store.commit('addToList',{
         content:toDoEvent,
         status:false,
         isShow:true
       })
+      debugger;
 
 
     }

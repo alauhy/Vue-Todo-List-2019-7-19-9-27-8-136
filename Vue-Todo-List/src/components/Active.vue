@@ -37,10 +37,11 @@
 <script>
     export default {
         name: "Active",
-        props:[
-            'toDoList'
-
-        ],
+        data(){
+          return {
+              toDoList: this.$store.state.todolist
+          }
+        },
         methods: {
             setStatus: function (ev, index) {
                 if (ev.target.checked) {
