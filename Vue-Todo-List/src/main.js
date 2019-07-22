@@ -21,7 +21,7 @@ const store = new Vuex.Store({
       state.todolist = list
     },
     addToList(state,event) {
-      state.todolist.add(event)
+      state.todolist.push(event)
     },
     setStatusFalse(state,index) {
         state.todolist.status[index] = false;

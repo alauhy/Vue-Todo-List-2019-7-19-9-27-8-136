@@ -2,7 +2,7 @@
 
     <div id="active">
         <dl class="div-body-data-table-dl">
-            <dt class="div-body-data-table-dl" v-for="(n,index) in toDoList" v-bind:key="index">
+            <dt class="div-body-data-table-dl" v-for="(n,index) in this.$store.state.todolist" v-bind:key="index">
                 <span v-if="n.isShow">
                 <span v-if="n.status" class="div-body-data-table-dl-del">{{index+1}}.</span>
                 <span v-else>{{index+1}}.</span>
