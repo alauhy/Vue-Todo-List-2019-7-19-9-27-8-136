@@ -21,17 +21,12 @@ export default {
 
   },
 
-  mounted(){
+  created(){
     this.axios.get('http://5d3576325b83cd0014d0adb9.mockapi.io/api/v1/todolist').then(res=>
     {
       this.$store.commit('toSetList',res.data)
+      console.log(this.$store.state.todolist)
     })
-  },
-  watch:{
-    watchTheList(){
-      this.$store.state.todolist
-    }
-
   },
   methods:{
 

@@ -38,32 +38,33 @@
     export default {
         name: "Active",
         data(){
-          return {
-              toDoList: this.$store.state.todolist
+          return{
+              toDoList:this.$store.state.todolist
           }
         },
+       watch:{
+            setList(){
+                this.toDoList=this.$store.state.todolist
+            }
+       },
         methods: {
             setStatus: function (ev, index) {
                 if (ev.target.checked) {
-                    this.toDoList.status[index] = false;
-                } else this.toDoList.status[index] = true;
+                    this.$store.commit('setStatusFalse',index)
+                }this.$store.commit('setStatusTrue',index)
             },
 
             atAll: function () {
 
-                this.toDoList.map(e => e.isShow = true);
+                this.$store.commit('atAll')
 
             },
             atActive: function () {
-                this.toDoList.map(e => {
-                    e.status ? e.isShow = false : e.isShow = true
-                });
+                this.$store.commit('atActive')
 
             },
             atComplete: function () {
-                this.toDoList.map(e => {
-                    e.status ? e.isShow = true : e.isShow = false
-                });
+                this.$store.commit('atComplete')
 
             }
 

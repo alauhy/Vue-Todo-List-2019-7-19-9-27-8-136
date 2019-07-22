@@ -12,8 +12,6 @@ Vue.use(Vuex)
 Vue.use(VueAxios,Axios)
 Vue.config.productionTip = false
 Vue.use(iView);
-Vue.prototype.bus = new Vue()
-
 const store = new Vuex.Store({
   state:{
     todolist: []
@@ -24,6 +22,27 @@ const store = new Vuex.Store({
     },
     addToList(state,event) {
       state.todolist.add(event)
+    },
+    setStatusFalse(state,index) {
+        state.todolist.status[index] = false;
+    },
+    setStatusTrue(state,index) {
+      state.todolist.status[index] = true;
+    },
+    atAll (state){
+     state.todolist.map(e => e.isShow = true);
+    },
+    atActive(state) {
+      state.todolist.map(e => {
+        e.status ? e.isShow = false : e.isShow = true
+      });
+
+    },
+    atComplete(state) {
+      state.todolist.map(e => {
+        e.status ? e.isShow = true : e.isShow = false
+      });
+
     }
   }
 })
