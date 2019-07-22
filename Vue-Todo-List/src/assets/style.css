@@ -7,7 +7,7 @@ input {
 
 .add-button {
     border-radius: 5px;
-    background-color: palevioletred;
+    background-color: #fc999b;
     font-size: 20px;
     color: white;
     width: 80px;
@@ -18,6 +18,9 @@ input {
     font-size: 25px;
     font-weight: bold;
     font-family: "Times New Roman";
+}
+#addbox{
+    margin: 5px;
 }
 #description{
     margin-left: 10px;
@@ -32,7 +35,8 @@ input {
     margin: 10px;
     border-width: 0;
     font-size: 20px;
-    color: pink;
+    color: #fc999b;
+    background-color: white;
 }
 #active {
     width: 680px;
@@ -47,8 +51,15 @@ input {
 }
 
 .pink {
+    width: 570px;
     margin: 5px;
-    background: #ffe4e1;
+    background: #f4ecec;
+    display: inline-block;
+
+}
+.normal {
+    display: inline-block;
+    margin: 5px;
 
 }
 

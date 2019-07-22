@@ -1,21 +1,42 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Active></Active>
+    <AddBox @sendTodo="addToList"></AddBox>
+    <Active :toDoList="toDoList"></Active>
+
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
-import Active from './components/List/Active'
+import Active from './components/Active'
+import AddBox from './components/AddBox'
 
 export default {
   name: 'app',
   components: {
     Header,
     Active,
+    AddBox
 
+  },
+  data(){
+    return{
+      toDoList: [],
+    }
+  },
+  methods:{
+    addToList(toDoEvent) {
+      this.toDoList.push({
+        content:toDoEvent,
+        status:false,
+        isShow:true
+      })
+
+
+    }
   }
+
 }
 </script>
 
