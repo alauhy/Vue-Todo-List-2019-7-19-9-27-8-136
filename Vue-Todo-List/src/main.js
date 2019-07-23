@@ -8,21 +8,49 @@ import VueAxios from 'vue-axios'
 import store from './store'
 import VueRouter from 'vue-router'
 
-const header ={tempIndex:'<div>header</div>' }
-const list ={tempIndex:'<div>active</div>' }
+
 Vue.use(VueAxios,Axios)
 Vue.config.productionTip = false
 Vue.use(iView);
-Vue.use(VueRouter)
-const routes= [
-  {path:'/header',component:header},
-  {path:'/list',component:list},
-]
-const router = new VueRouter({
-  routes // (缩写) 相当于 routes: routes
+
+
+const store = new Vuex.Store({
+  state:{
+    todolist: []
+  },
+  mutations:{
+    toSetList(state,list){
+      state.todolist = list
+    },
+    addToList(state,event) {
+      state.todolist.push(event)
+    },
+    setStatusFalse(state,index) {
+        state.todolist.status[index] = false;
+    },
+    setStatusTrue(state,index) {
+      state.todolist.status[index] = true;
+    },
+    atAll (state){
+     state.todolist.map(e => e.isShow = true);
+    },
+    atActive(state) {
+      state.todolist.map(e => {
+        e.status ? e.isShow = false : e.isShow = true
+      });
+
+    },
+    atComplete(state) {
+      state.todolist.map(e => {
+        e.status ? e.isShow = true : e.isShow = false
+      });
+
+    }
+  }
+
 })
 new Vue({
-  router,
+
   store,
   render: h => h(App),
 }).$mount('#app')
