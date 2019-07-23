@@ -1,55 +1,26 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <AddBox @sendTodo="addToList"></AddBox>
-    <Active ></Active>
-    <FootButton></FootButton>
-
-  </div>
+    <div id="app">
+        <router-view/>
+    </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import Active from './components/Active'
-import AddBox from './components/AddBox'
-import FootButton from './components/FootButton'
 
-export default {
-  name: 'app',
-  components: {
-    Header,
-    Active,
-    AddBox,
-    FootButton
-
-  },
-mounted(){
-  this.$store.dispatch('getToDos')
-},
-
-  methods:{
-
-    addToList(toDoEvent) {
-
-      this.$store.dispatch('postToDos',toDoEvent)
-      // debugger;
-
-
+    export default {
+        name: 'app',
     }
-  }
-
-}
 </script>
 
 <style>
-  @import "assets/style.css";
-#app {
+    @import "assets/style.css";
 
-  height: auto;
-  width: 700px;
-  border:1px solid black;
-  border-radius: 15px;
-  margin-left: 30%;
+    #app {
 
-}
-</style>z
+        height: auto;
+        width: 700px;
+        border: 1px solid black;
+        border-radius: 15px;
+        margin-left: 30%;
+
+    }
+</style>
