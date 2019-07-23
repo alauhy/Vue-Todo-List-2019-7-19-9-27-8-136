@@ -2,7 +2,7 @@
 
     <div id="active">
         <dl class="div-body-data-table-dl">
-            <dt class="div-body-data-table-dl" v-for="(n,index) in toDoList" v-bind:key="index">
+            <dt class="div-body-data-table-dl" v-for="(n,index) in this.$store.state.todolist" v-bind:key="index">
                 <span v-if="n.isShow">
                 <span v-if="n.status" class="div-body-data-table-dl-del">{{index+1}}.</span>
                 <span v-else>{{index+1}}.</span>
@@ -24,11 +24,7 @@
             </dt>
         </dl>
 
-        <span class="footer-span">
-            <button class="footer-div-button" @click="atAll">ALL</button>
-             <button class="footer-div-button" @click="atActive">Active</button>
-             <button class="footer-div-button" @click="atComplete">Complete</button>
-        </span>
+
 
 
     </div>
@@ -52,21 +48,9 @@
                 if (ev.target.checked) {
                     this.$store.commit('setStatusFalse',index)
                 }this.$store.commit('setStatusTrue',index)
-            },
-
-            atAll: function () {
-
-                this.$store.commit('atAll')
-
-            },
-            atActive: function () {
-                this.$store.commit('atActive')
-
-            },
-            atComplete: function () {
-                this.$store.commit('atComplete')
-
             }
+
+
 
         }
     }

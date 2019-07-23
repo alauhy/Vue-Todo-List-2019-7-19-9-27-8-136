@@ -3,6 +3,7 @@
     <Header></Header>
     <AddBox @sendTodo="addToList"></AddBox>
     <Active ></Active>
+    <FootButton></FootButton>
 
   </div>
 </template>
@@ -11,13 +12,15 @@
 import Header from './components/Header'
 import Active from './components/Active'
 import AddBox from './components/AddBox'
+import FootButton from './components/FootButton'
 
 export default {
   name: 'app',
   components: {
     Header,
     Active,
-    AddBox
+    AddBox,
+    FootButton
 
   },
 
