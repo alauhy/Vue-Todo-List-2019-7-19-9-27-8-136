@@ -23,24 +23,16 @@ export default {
     FootButton
 
   },
+mounted(){
+  this.$store.dispatch('getToDos')
+},
 
-  created(){
-    this.axios.get('http://5d3576325b83cd0014d0adb9.mockapi.io/api/v1/todolist').then(res=>
-    {
-      this.$store.commit('toSetList',res.data)
-      console.log(this.$store.state.todolist)
-    })
-  },
   methods:{
 
     addToList(toDoEvent) {
 
-      this.$store.commit('addToList',{
-        content:toDoEvent,
-        status:false,
-        isShow:true
-      })
-      debugger;
+      this.$store.dispatch('postToDos',toDoEvent)
+      // debugger;
 
 
     }

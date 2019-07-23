@@ -59,6 +59,7 @@ input {
 }
 .normal {
     display: inline-block;
+    width: 570px;
     margin: 5px;
 
 }
@@ -72,9 +73,12 @@ input {
 .div-body-data-table-dl-checkbox {
     margin: 5px;
 }
-
+.div-body-data-table-dl-del-index{
+    color: lightgrey;
+}
 .div-body-data-table-dl-del {
     color: lightgrey;
+    text-decoration: line-through;
 }
 .footer-span{
     display: block;
@@ -82,4 +86,10 @@ input {
 }
 #foot-button{
     margin: 5px;
+}
+.del-button{
+    border-width:0;
+    font-size: 20px;
+    color:  #fc999b;
+    background-color: white;
 }
