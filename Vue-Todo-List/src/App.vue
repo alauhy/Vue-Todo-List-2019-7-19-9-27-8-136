@@ -13,5 +13,8 @@
 
 <style>
     @import "assets/style.css";
+ div{
+     height: 100%;
+ }
 
 </style>

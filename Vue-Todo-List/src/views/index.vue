@@ -1,8 +1,6 @@
 <template>
     <div id="index">
-        <input type="text" placeholder="请输入姓名" v-model.trim="userName">
-        <button @click="goHome">开始使用</button>
-
+        <a-input-search class="index-input" placeholder="请输入你的姓名" @search="goHome" v-model="userName" enterButton="立即进入" size="large" />
     </div>
 </template>
 
@@ -28,5 +26,13 @@
 </script>
 
 <style scoped>
+    .index-input{
+        margin-top: 10%;
+        width: 50%;
+
+    }
+    #index{
+        text-align: center;
+    }
 
 </style>

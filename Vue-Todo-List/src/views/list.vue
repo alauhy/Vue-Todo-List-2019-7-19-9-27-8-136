@@ -1,6 +1,7 @@
 <template>
     <div id="list">
         <Header></Header>
+
         <AddBox @sendTodo="addToList"></AddBox>
         <Active ></Active>
         <FootButton></FootButton>
