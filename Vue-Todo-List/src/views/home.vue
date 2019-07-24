@@ -24,8 +24,8 @@
             <a-layout>
                 <a-layout-header style="background: #fff; padding: 0">
 
-                    <a-icon type="user" class="home-div-user-line"/>
-                    <label class="home-div-user-name">{{userName}}</label>
+                    <a-avatar class="home-div-user-line" :size="30" :src="url"/>
+                    <label class="home-div-user-name">Hi,{{userName}}</label>
                     <a-icon
                             class="trigger"
                              type="logout"
@@ -42,11 +42,13 @@
 </template>
 
 <script>
+    import pic from '../assets/avatar.jpeg'
     export default {
         name: "home",
         data(){
           return {
-              userName:''
+              userName:'',
+              url:pic
           }
         },
         mounted(){

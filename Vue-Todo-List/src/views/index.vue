@@ -1,15 +1,18 @@
 <template>
     <div id="index">
+           <p class="index-p"><a-avatar :size="150" :src="url"/></p>
         <a-input-search class="index-input" placeholder="请输入你的姓名" @search="goHome" v-model="userName" enterButton="立即进入" size="large" />
     </div>
 </template>
 
 <script>
+    import pic from '../assets/avatar.jpeg'
     export default {
         name: "index",
         data(){
             return {
-                userName:''
+                userName:'',
+                url:pic
             }
         },
         methods:{
@@ -27,12 +30,16 @@
 
 <style scoped>
     .index-input{
-        margin-top: 10%;
+        margin-top:0;
         width: 50%;
 
     }
     #index{
         text-align: center;
     }
+    .index-p{
+        margin-top:10% ;
+    }
+
 
 </style>

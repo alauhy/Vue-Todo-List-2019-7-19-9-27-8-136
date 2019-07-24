@@ -1,10 +1,14 @@
 <template>
     <div id="list">
-        <Header></Header>
+        <a-layout>
+            <a-layout-header><Header></Header></a-layout-header>
+            <a-layout-content>
+                <AddBox></AddBox>
+                <Active></Active>
+            </a-layout-content>
+            <a-layout-footer><FootButton></FootButton></a-layout-footer>
+        </a-layout>
 
-        <AddBox @sendTodo="addToList"></AddBox>
-        <Active ></Active>
-        <FootButton></FootButton>
     </div>
 </template>
 
@@ -44,11 +48,12 @@
     #list {
 
         height: auto;
-        width: 700px;
-        border:1px solid black;
-        border-radius: 15px;
-        margin-left: 30%;
-
+        width: 100%;
+        border-width: 0;
     }
+    .ant-layout-content {
+         background: white;
+         min-height: 120px;
+     }
 
 </style>

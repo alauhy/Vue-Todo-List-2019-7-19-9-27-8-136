@@ -13,7 +13,9 @@
                      <input v-else type="text" v-model="n.content" @blur="updateToDos(n.id)">
 
                 </span>
-                    <button class="del-button" @click="delToDos(n.id)">x</button>
+                    <button class="del-button" @click="delToDos(n.id)">
+                        <a-icon type="delete" />
+                    </button>
 
                 </span>
 
@@ -28,6 +30,7 @@
 
 <script>
     import {mapState} from 'vuex'
+
     export default {
         name: "Active",
         data(){

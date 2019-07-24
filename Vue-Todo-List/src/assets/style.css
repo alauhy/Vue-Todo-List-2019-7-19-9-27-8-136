@@ -12,14 +12,20 @@ input {
     color: white;
     width: 80px;
     height: 35px;
+    margin-left: 10px;
+}
+#header{
+    text-align: center;
 }
 #title{
     margin-left: 10px;
     font-size: 25px;
     font-weight: bold;
+    color: white;
     font-family: "Times New Roman";
 }
 #addbox{
+    text-align: center;
     margin: 5px;
 }
 #description{
@@ -35,11 +41,11 @@ input {
     margin: 10px;
     border-width: 0;
     font-size: 20px;
-    color: #fc999b;
-    background-color: white;
+    color: black;
+    background-color: #f0f2f5;
 }
 #active {
-    width: 680px;
+    width: 100%;
     height: auto;
     margin: 10px;
     text-align: left;
@@ -51,7 +57,7 @@ input {
 }
 
 .pink {
-    width: 570px;
+    width: 90%;
     margin: 5px;
     background: #f4ecec;
     display: inline-block;
@@ -59,12 +65,14 @@ input {
 }
 .normal {
     display: inline-block;
-    width: 570px;
+    width: 90%;
     margin: 5px;
 
 }
 
 .div-body-data-table-dl {
+    width: 100%;
+    height: auto;
     margin: 5px;
     text-align: left;
     font-size: 20px;
