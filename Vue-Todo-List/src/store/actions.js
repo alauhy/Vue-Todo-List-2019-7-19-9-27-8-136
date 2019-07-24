@@ -13,7 +13,8 @@ export default {
        axios.post('http://localhost:3001/todos',{
             content:toDoEvent,
             status:false,
-            isShow:true
+            isShow:true,
+           editable:true
 
         }).then(()=>dispatch('getToDos'))
 

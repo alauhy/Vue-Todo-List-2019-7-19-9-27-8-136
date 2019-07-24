@@ -93,3 +93,35 @@ input {
     color:  #fc999b;
     background-color: white;
 }
+.home-div-dt-button{
+    border-width: 0;
+    font-size:15px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #fc999b;
+}
+.home-div-un{
+    font-size: 30px;
+    margin-left: 10%;
+    margin-bottom: 30px;
+}
+.home-div-button{
+    border-width: 2px;
+    font-size:15px;
+    margin-left: 80%;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    color: purple;
+}
+.home-div-dl-bar{
+    font-size: 30px;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    color: red;
+}
+.home-div-dl{
+    border-width: 1px;
+    border-radius: 15px;
+}
